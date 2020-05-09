@@ -82,7 +82,7 @@ contract Owned {
 // ERC20 Token, with the addition of symbol, name and decimals and assisted
 // token transfers
 // ----------------------------------------------------------------------------
-contract dddToken is ERC20Interface, Owned, SafeMath {
+contract ticker is ERC20Interface, Owned, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -96,12 +96,12 @@ contract dddToken is ERC20Interface, Owned, SafeMath {
     // Constructor
     // ------------------------------------------------------------------------
     constructor() public {
-        symbol = "ddd";
-        name = "dddToken";
+        symbol = "tckr";
+        name = "ticker";
         decimals = 18;
         _totalSupply = 100000000000000000000000000;
-        balances[0xB8C9C69424892E40D526b6E6F588B16324481592] = _totalSupply;
-        emit Transfer(address(0), 0xB8C9C69424892E40D526b6E6F588B16324481592, _totalSupply);
+        balances[0x9769D8fA198cA1278c3D7Be3c2773c78d6CB5420] = _totalSupply;
+        emit Transfer(address(0), 0x9769D8fA198cA1278c3D7Be3c2773c78d6CB5420, _totalSupply);
     }
 
 
